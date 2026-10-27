@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Models, No Account — Kilo Code Free Handbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <h1 class="site-title"><a href="index.html">Kilo Code Free Handbook</a></h1>
+      <p class="site-subtitle">A beginner&#39;s guide to using Kilo Code for free</p>
+    </div>
+  </header>
+<nav class="top-nav">
+  <ul>
+    <li><a href="index.html">Welcome</a></li>
+    <li><a href="installing-the-cli.html">Installing the Kilo CLI</a></li>
+    <li><a href="installing-the-vs-code-extension.html">Installing the VS Code Extension</a></li>
+    <li><a href="free-models-no-account.html" class="active">Free Models, No Account</a></li>
+    <li><a href="headless-runs.html">Headless Runs</a></li>
+    <li><a href="modes-and-agents.html">Modes and Agents</a></li>
+    <li><a href="safe-permissions.html">Safe Permissions</a></li>
+    <li><a href="checking-cost-is-zero.html">Checking Cost Is $0</a></li>
+    <li><a href="troubleshooting.html">Troubleshooting</a></li>
+    <li><a href="glossary.html">Glossary</a></li>
+    <li><a href="checklist.html">Checklists</a></li>
+  </ul>
+</nav>
+  <main class="wrapper">
+<h1>Free Models, No Account</h1>
+<p>You can use Kilo Code with free AI models and you do not need to create an account to get started. This section walks you through picking free models, using them without signing in, and understanding the limits of the free tier.</p>
+<h2>What "free model" means</h2>
+<p>Kilo sends your code and requests to an AI model, which generates suggestions. Some models are free to use within limits; others require payment or a paid account. This handbook focuses on the free options so you can try Kilo without spending money.</p>
+<h2>Step 1: See which models are available</h2>
+<p>Run:</p>
+<pre><code class="lang-bash">kilo models list</code></pre>
+<p>(If this command doesn't exist in your version, run <code>kilo --help</code> and look for a models or config command.)</p>
+<p>Look for models marked <strong>free</strong> or with a <code>$0</code> price. Common free options include community models and provider free tiers.</p>
+<h2>Step 2: Choose a free model</h2>
+<p>Set a free model as your default:</p>
+<pre><code class="lang-bash">kilo config set model &lt;free-model-name&gt;</code></pre>
+<p>Replace <code><free-model-name></code> with the exact name from <code>kilo models list</code>, for example:</p>
+<pre><code class="lang-bash">kilo config set model free-default</code></pre>
+<p>If you're not sure which name to use, run <code>kilo config list</code> to see what's currently configured.</p>
+<h2>Step 3: Use Kilo without an account</h2>
+<p>You do not need to sign in to use free models. Simply run:</p>
+<pre><code class="lang-bash">kilo</code></pre>
+<p>or open the Kilo panel in VS Code and start typing. Kilo will use the free model you selected in Step 2.</p>
+<h2>Step 4: Understand free-tier limits</h2>
+<p>Free models usually have limits, such as:</p>
+<ul>
+  <li>A maximum number of requests per day or per month</li>
+  <li>Slower response times during busy periods</li>
+  <li>Smaller context windows (the model "remembers" less of your code at once)</li>
+</ul>
+<p>If you hit a limit, Kilo will tell you. Wait until the limit resets, switch to a different free model, or sign in if you want higher limits.</p>
+<h2>Cost is always $0 for free models</h2>
+<p>When you use only free models without signing into a paid plan, your cost is $0. You can verify this anytime — see <a href="checking-cost-is-zero.html">Checking cost is $0</a>.</p>
+<h2>Quick checklist</h2>
+<ul>
+  <li>[ ] <code>kilo models list</code> runs and shows available models</li>
+  <li>[ ] You selected a free model with <code>kilo config set model</code></li>
+  <li>[ ] You ran <code>kilo</code> without signing in</li>
+  <li>[ ] You checked your cost and saw $0 (see <a href="checking-cost-is-zero.html">Checking cost is $0</a>)</li>
+</ul>
+<h2>Safety reminder</h2>
+<p>Never paste API keys, passwords, or personal data into Kilo prompts, even when using free models. Free models are still AI services, and you should treat anything you type as potentially visible to the model provider. See <a href="safe-permissions.html">Safe permissions</a>.</p>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>Written by Dylan Asdale of Asdale Dynamics, LLC.</p>
+      <p>Copyright (c) 2026 Asdale Dynamics, LLC. This handbook is open source under the MIT License.</p>
+    </div>
+  </footer>
+</body>
+</html>

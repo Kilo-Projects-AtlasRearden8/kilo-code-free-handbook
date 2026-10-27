@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installing the Kilo CLI — Kilo Code Free Handbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <h1 class="site-title"><a href="index.html">Kilo Code Free Handbook</a></h1>
+      <p class="site-subtitle">A beginner&#39;s guide to using Kilo Code for free</p>
+    </div>
+  </header>
+<nav class="top-nav">
+  <ul>
+    <li><a href="index.html">Welcome</a></li>
+    <li><a href="installing-the-cli.html" class="active">Installing the Kilo CLI</a></li>
+    <li><a href="installing-the-vs-code-extension.html">Installing the VS Code Extension</a></li>
+    <li><a href="free-models-no-account.html">Free Models, No Account</a></li>
+    <li><a href="headless-runs.html">Headless Runs</a></li>
+    <li><a href="modes-and-agents.html">Modes and Agents</a></li>
+    <li><a href="safe-permissions.html">Safe Permissions</a></li>
+    <li><a href="checking-cost-is-zero.html">Checking Cost Is $0</a></li>
+    <li><a href="troubleshooting.html">Troubleshooting</a></li>
+    <li><a href="glossary.html">Glossary</a></li>
+    <li><a href="checklist.html">Checklists</a></li>
+  </ul>
+</nav>
+  <main class="wrapper">
+<h1>Installing the Kilo CLI</h1>
+<p>The Kilo Command Line Interface (CLI) lets you run Kilo Code from your terminal. It works on macOS, Linux, and Windows, and the free tier requires no account to get started.</p>
+<h2>Step 1: Check that you have Node.js</h2>
+<p>Kilo runs on Node.js. Open your terminal and run:</p>
+<pre><code class="lang-bash">node --version</code></pre>
+<p>If you see a version number (for example <code>v20.19.2</code>), you're good. Continue to Step 2.</p>
+<p>If you see "command not found", install Node.js first:</p>
+<ul>
+  <li><strong>macOS</strong>: install <a href="https://brew.sh">Homebrew</a>, then run <code>brew install node</code></li>
+  <li><strong>Windows</strong>: download the installer from <a href="https://nodejs.org">nodejs.org</a></li>
+  <li><strong>Linux</strong>: use your package manager, for example <code>sudo apt install nodejs npm</code></li>
+</ul>
+<p>After installing, close and reopen your terminal, then run <code>node --version</code> again.</p>
+<h2>Step 2: Install Kilo</h2>
+<p>You can run Kilo without installing anything globally by using <code>npx</code>, which downloads and runs the tool for you:</p>
+<pre><code class="lang-bash">npx kilo --help</code></pre>
+<p>To install it globally so you can just type <code>kilo</code>:</p>
+<pre><code class="lang-bash">npm install -g kilo</code></pre>
+<p>Then verify:</p>
+<pre><code class="lang-bash">kilo --version</code></pre>
+<p>You should see a version number. If <code>kilo</code> is not found after a global install, your npm bin folder may not be on your <code>PATH</code>. Run <code>npm config get prefix</code> and add the <code>bin</code> folder it reports to your terminal's <code>PATH</code>, then restart your terminal.</p>
+<h2>Step 3: Sign in (optional for free models)</h2>
+<p>Some Kilo features work without signing in. To use free models with no account, skip sign-in for now and go to <a href="free-models-no-account.html">Free models, no account</a>.</p>
+<p>If you want to save preferences or use account features later:</p>
+<pre><code class="lang-bash">kilo auth login</code></pre>
+<p>Follow the prompts. A browser window will open to complete sign-in. You do not need a paid plan to use free models.</p>
+<h2>Step 4: Your first command</h2>
+<p>Pick a folder you want to work in, or create a practice folder:</p>
+<pre><code class="lang-bash">mkdir kilo-practice
+cd kilo-practice</code></pre>
+<p>Run Kilo in that folder:</p>
+<pre><code class="lang-bash">kilo</code></pre>
+<p>Kilo will look at your files and offer to help. Type a plain-English request like:</p>
+<blockquote>"Add a comment at the top of every file explaining what it does."</blockquote>
+<p>Review Kilo's suggested changes before accepting them. We cover safe reviewing in <a href="safe-permissions.html">Safe permissions</a>.</p>
+<h2>Quick checklist</h2>
+<ul>
+  <li>[ ] <code>node --version</code> prints a version number</li>
+  <li>[ ] <code>kilo --version</code> prints a version number (or <code>npx kilo --help</code> works)</li>
+  <li>[ ] You have run <code>kilo</code> once in a practice folder</li>
+  <li>[ ] You know where to find <code>kilo --help</code> if you get stuck</li>
+</ul>
+<h2>If installation fails</h2>
+<p>See <a href="troubleshooting.html">Troubleshooting</a> for common install errors and fixes.</p>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>Written by Dylan Asdale of Asdale Dynamics, LLC.</p>
+      <p>Copyright (c) 2026 Asdale Dynamics, LLC. This handbook is open source under the MIT License.</p>
+    </div>
+  </footer>
+</body>
+</html>

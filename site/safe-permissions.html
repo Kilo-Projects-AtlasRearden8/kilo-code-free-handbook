@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Permissions — Kilo Code Free Handbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <h1 class="site-title"><a href="index.html">Kilo Code Free Handbook</a></h1>
+      <p class="site-subtitle">A beginner&#39;s guide to using Kilo Code for free</p>
+    </div>
+  </header>
+<nav class="top-nav">
+  <ul>
+    <li><a href="index.html">Welcome</a></li>
+    <li><a href="installing-the-cli.html">Installing the Kilo CLI</a></li>
+    <li><a href="installing-the-vs-code-extension.html">Installing the VS Code Extension</a></li>
+    <li><a href="free-models-no-account.html">Free Models, No Account</a></li>
+    <li><a href="headless-runs.html">Headless Runs</a></li>
+    <li><a href="modes-and-agents.html">Modes and Agents</a></li>
+    <li><a href="safe-permissions.html" class="active">Safe Permissions</a></li>
+    <li><a href="checking-cost-is-zero.html">Checking Cost Is $0</a></li>
+    <li><a href="troubleshooting.html">Troubleshooting</a></li>
+    <li><a href="glossary.html">Glossary</a></li>
+    <li><a href="checklist.html">Checklists</a></li>
+  </ul>
+</nav>
+  <main class="wrapper">
+<h1>Safe Permissions</h1>
+<p>Kilo can read your files and suggest changes. Used carefully, that's a superpower. Used carelessly, it can overwrite work or expose private information. This section shows how to use Kilo safely, especially as a beginner.</p>
+<h2>The golden rule</h2>
+<p><strong>Never accept a change you cannot explain in plain English.</strong> If Kilo suggests code and you don't know what it does, reject it or ask Kilo to explain it first.</p>
+<h2>Before you start</h2>
+<ol>
+  <li><strong>Work in a practice folder.</strong> Don't run Kilo on your only copy of important files.</li>
+  <li><strong>Use git or backups.</strong> Initialize a git repo in your project folder (<code>git init</code>) so you can review and undo changes with <code>git diff</code> and <code>git checkout</code>. If you don't use git, copy your folder before running Kilo.</li>
+  <li><strong>Never paste secrets.</strong> API keys, passwords, personal data, and patient information should never go into a Kilo prompt. Kilo is an AI service — treat what you type as potentially visible to the model provider.</li>
+  <li><strong>Healthcare data:</strong> If you work in healthcare, never enter real patient information into Kilo. Use made-up practice data only. Kilo is for education, not medical advice.</li>
+</ol>
+<h2>Reviewing changes</h2>
+<p>When Kilo suggests an edit:</p>
+<ol>
+  <li>Read the full diff, not just the summary.</li>
+  <li>Ask: "What does each changed line do?"</li>
+  <li>Ask: "Could this delete or overwrite anything I need?"</li>
+  <li>Accept only the parts you understand. In many versions you can accept changes hunk by hunk (piece by piece).</li>
+  <li>Run your code or tests after accepting changes, to make sure nothing broke.</li>
+</ol>
+<h2>Permissions in headless mode</h2>
+<p>Headless runs (see <a href="headless-runs.html">Headless runs</a>) apply changes without pausing for each one. Only use <code>--yes</code>/auto-accept on:</p>
+<ul>
+  <li>Code you've already reviewed once</li>
+  <li>Practice folders you don't mind resetting</li>
+  <li>Tasks with no secrets or personal data</li>
+</ul>
+<p>Always check <code>git diff</code> afterward.</p>
+<h2>Saying no is okay</h2>
+<p>You can reject any suggestion. You can stop Kilo at any time. You can close the panel or press <code>Ctrl+C</code> in the terminal. You are always in control.</p>
+<h2>Quick checklist</h2>
+<ul>
+  <li>[ ] You are working in a practice folder or a git repo</li>
+  <li>[ ] You can run <code>git diff</code> to review changes (or you backed up your files)</li>
+  <li>[ ] You have not pasted any keys, passwords, or personal data</li>
+  <li>[ ] You read every diff before accepting</li>
+  <li>[ ] You rejected at least one suggestion just to practice saying no</li>
+</ul>
+<h2>If something goes wrong</h2>
+<ul>
+  <li>Undo with git: <code>git checkout -- .</code> or <code>git reset --hard HEAD</code></li>
+  <li>Restore from your backup copy</li>
+  <li>Close Kilo and restart — no changes are permanent until you accept them</li>
+  <li>See <a href="troubleshooting.html">Troubleshooting</a> for common problems</li>
+</ul>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>Written by Dylan Asdale of Asdale Dynamics, LLC.</p>
+      <p>Copyright (c) 2026 Asdale Dynamics, LLC. This handbook is open source under the MIT License.</p>
+    </div>
+  </footer>
+</body>
+</html>

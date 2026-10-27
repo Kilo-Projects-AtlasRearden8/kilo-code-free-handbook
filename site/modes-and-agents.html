@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modes and Agents — Kilo Code Free Handbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <h1 class="site-title"><a href="index.html">Kilo Code Free Handbook</a></h1>
+      <p class="site-subtitle">A beginner&#39;s guide to using Kilo Code for free</p>
+    </div>
+  </header>
+<nav class="top-nav">
+  <ul>
+    <li><a href="index.html">Welcome</a></li>
+    <li><a href="installing-the-cli.html">Installing the Kilo CLI</a></li>
+    <li><a href="installing-the-vs-code-extension.html">Installing the VS Code Extension</a></li>
+    <li><a href="free-models-no-account.html">Free Models, No Account</a></li>
+    <li><a href="headless-runs.html">Headless Runs</a></li>
+    <li><a href="modes-and-agents.html" class="active">Modes and Agents</a></li>
+    <li><a href="safe-permissions.html">Safe Permissions</a></li>
+    <li><a href="checking-cost-is-zero.html">Checking Cost Is $0</a></li>
+    <li><a href="troubleshooting.html">Troubleshooting</a></li>
+    <li><a href="glossary.html">Glossary</a></li>
+    <li><a href="checklist.html">Checklists</a></li>
+  </ul>
+</nav>
+  <main class="wrapper">
+<h1>Modes and Agents</h1>
+<p>Kilo Code can work in different <strong>modes</strong> and, in some versions, as <strong>agents</strong> that plan and carry out multi-step tasks. This section explains the difference and how to choose the right one for your job.</p>
+<h2>What is a mode?</h2>
+<p>A mode changes how Kilo behaves:</p>
+<ul>
+  <li><strong>Chat mode</strong>: Ask questions and get explanations. Good for learning and exploring.</li>
+  <li><strong>Edit mode</strong>: Kilo suggests changes to your files. You review and accept or reject each one. Best for beginners.</li>
+  <li><strong>Agent mode</strong> (where available): Kilo plans a multi-step task and carries it out across several files, asking for approval at key points.</li>
+</ul>
+<p>Not every version has every mode. Run <code>kilo --help</code> or check the Kilo panel in VS Code to see what's available to you.</p>
+<h2>Step 1: Start in chat mode</h2>
+<p>If you're new to Kilo, start here. Ask a question:</p>
+<blockquote>"What does this function do?"</blockquote>
+<p>or</p>
+<blockquote>"How do I add a comment to a JavaScript file?"</blockquote>
+<p>Kilo answers without changing your files. No risk, no review needed.</p>
+<h2>Step 2: Try edit mode</h2>
+<p>When you're ready to change code, use edit mode. Example:</p>
+<blockquote>"Add error handling to the save function in app.js."</blockquote>
+<p>Kilo will show you a diff — a before-and-after view of the change. Review it:</p>
+<ul>
+  <li>Green lines are added.</li>
+  <li>Red lines are removed.</li>
+  <li>Accept changes you understand and want.</li>
+  <li>Reject changes you don't understand.</li>
+</ul>
+<p>Never accept a diff you can't explain in plain English. That's the golden rule of AI coding.</p>
+<h2>Step 3: Try agent mode (if available)</h2>
+<p>For bigger jobs, agent mode can help:</p>
+<blockquote>"Refactor the checkout flow: move tax calculation into its own file, add tests, and update the receipt page."</blockquote>
+<p>Kilo breaks this into steps and works through them. It may ask for approval before editing each file. Watch each approval prompt carefully.</p>
+<p>Agent mode is powerful but moves faster than edit mode. Use it on practice folders first, and keep git or file backups handy so you can undo anything.</p>
+<h2>Choosing a mode</h2>
+<table>
+  <tr><th>Situation</th><th>Suggested mode</th></tr>
+  <tr><td>Learning how something works</td><td>Chat mode</td></tr>
+  <tr><td>Small, careful edits to one file</td><td>Edit mode</td></tr>
+  <tr><td>Multi-file refactoring you understand</td><td>Agent mode</td></tr>
+  <tr><td>Anything with passwords, keys, or customer data</td><td>Avoid AI entirely until reviewed</td></tr>
+</table>
+<h2>Quick checklist</h2>
+<ul>
+  <li>[ ] You asked one question in chat mode</li>
+  <li>[ ] You accepted one edit in edit mode after reading the diff</li>
+  <li>[ ] You tried agent mode on a practice folder (if available)</li>
+  <li>[ ] You rejected at least one suggestion you didn't understand — that's a win, not a failure</li>
+</ul>
+<h2>Modes in VS Code</h2>
+<p>In the VS Code extension, look for a mode selector in the Kilo panel — often a dropdown or a set of icons. Switch modes the same way you would in the CLI: start with chat, move to edit when you're comfortable.</p>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>Written by Dylan Asdale of Asdale Dynamics, LLC.</p>
+      <p>Copyright (c) 2026 Asdale Dynamics, LLC. This handbook is open source under the MIT License.</p>
+    </div>
+  </footer>
+</body>
+</html>

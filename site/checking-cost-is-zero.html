@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checking Cost Is $0 — Kilo Code Free Handbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <h1 class="site-title"><a href="index.html">Kilo Code Free Handbook</a></h1>
+      <p class="site-subtitle">A beginner&#39;s guide to using Kilo Code for free</p>
+    </div>
+  </header>
+<nav class="top-nav">
+  <ul>
+    <li><a href="index.html">Welcome</a></li>
+    <li><a href="installing-the-cli.html">Installing the Kilo CLI</a></li>
+    <li><a href="installing-the-vs-code-extension.html">Installing the VS Code Extension</a></li>
+    <li><a href="free-models-no-account.html">Free Models, No Account</a></li>
+    <li><a href="headless-runs.html">Headless Runs</a></li>
+    <li><a href="modes-and-agents.html">Modes and Agents</a></li>
+    <li><a href="safe-permissions.html">Safe Permissions</a></li>
+    <li><a href="checking-cost-is-zero.html" class="active">Checking Cost Is $0</a></li>
+    <li><a href="troubleshooting.html">Troubleshooting</a></li>
+    <li><a href="glossary.html">Glossary</a></li>
+    <li><a href="checklist.html">Checklists</a></li>
+  </ul>
+</nav>
+  <main class="wrapper">
+<h1>Checking Your Cost Is $0</h1>
+<p>One of the best things about free models is that they cost nothing — but you should verify, not assume. This section shows how to check that your Kilo usage is still $0.</p>
+<h2>Step 1: Check your cost from the CLI</h2>
+<p>Run:</p>
+<pre><code class="lang-bash">kilo cost</code></pre>
+<p>or</p>
+<pre><code class="lang-bash">kilo --cost</code></pre>
+<p>Exact command names vary by version. If neither works, run <code>kilo --help</code> and look for cost, billing, or usage commands.</p>
+<p>You want to see something like:</p>
+<pre><code class="lang-">Total cost: $0.00</code></pre>
+<p>or</p>
+<pre><code class="lang-">Usage this month: $0.00 (free tier)</code></pre>
+<h2>Step 2: Check your cost in VS Code</h2>
+<p>Open the Kilo panel in VS Code and look for a "Usage," "Billing," or "Cost" section. It may be under settings or your account profile. Free usage without an account typically shows $0.00.</p>
+<h2>Step 3: Make checking a habit</h2>
+<p>Check your cost:</p>
+<ul>
+  <li>Before your first Kilo session of the week</li>
+  <li>After any session where you tried a new model</li>
+  <li>Before sharing your setup with someone else</li>
+</ul>
+<p>If you ever see a charge greater than $0, stop using paid models, switch back to a free model (see <a href="free-models-no-account.html">Free models, no account</a>), and check your settings.</p>
+<h2>What $0.00 means</h2>
+<ul>
+  <li>You used only free models</li>
+  <li>You did not sign into a paid plan</li>
+  <li>You did not purchase credits or tokens</li>
+</ul>
+<p>If you sign in later and add a payment method, your cost may change. You control that — Kilo should not charge you without a clear action on your part.</p>
+<h2>Quick checklist</h2>
+<ul>
+  <li>[ ] <code>kilo cost</code> (or the equivalent in <code>kilo --help</code>) runs without error</li>
+  <li>[ ] The output shows $0.00</li>
+  <li>[ ] You checked the VS Code panel too, if you use the extension</li>
+  <li>[ ] You know which model you're using and that it's free</li>
+</ul>
+<h2>If cost isn't $0</h2>
+<ul>
+  <li>Switch to a free model: <code>kilo config set model <free-model-name></code></li>
+  <li>Sign out of paid features if you don't need them</li>
+  <li>Check <code>kilo --help</code> for a cost reset or usage command</li>
+  <li>See <a href="troubleshooting.html">Troubleshooting</a> if the cost command doesn't exist in your version</li>
+</ul>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>Written by Dylan Asdale of Asdale Dynamics, LLC.</p>
+      <p>Copyright (c) 2026 Asdale Dynamics, LLC. This handbook is open source under the MIT License.</p>
+    </div>
+  </footer>
+</body>
+</html>
