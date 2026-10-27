@@ -1,5 +1,11 @@
-# Generated output
-site/
 
 # Dependencies
+# Generated output
+*.pyc
+.env
+.env.*
+.venv/
+__pycache__/
+dist/*.tmp
 node_modules/
+site/
