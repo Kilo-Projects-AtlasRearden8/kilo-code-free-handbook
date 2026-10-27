@@ -1,0 +1,5 @@
+# Generated output
+site/
+
+# Dependencies
+node_modules/
